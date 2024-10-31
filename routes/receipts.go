@@ -9,6 +9,7 @@ import (
 func Receipts(r *gin.Engine) {
 	api := r.Group("/receipts")
 	{
+
 		api.POST("/extract", controllers.ExtractReceipt)
 		api.GET("/", controllers.GetAll)
 		api.GET("/:id", controllers.GetOne)
