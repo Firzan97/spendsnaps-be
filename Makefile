@@ -7,11 +7,11 @@ build:
 	@rm -rf output
 	@echo "Installing dependencies to vendor folder ..."
 	@go mod vendor
-	@echo "Compiling core ..."
-	@go build -o output/core
+	@echo "Compiling receipt-api ..."
+	@go build -o output/receipt-api
 
 build_image:
-	@docker build -t core .
+	@docker build -t receipt-api .
 
 clean:
 	@rm -rf output
@@ -20,4 +20,4 @@ test:
 	@go mod vendor && go test ./... -run ''
 
 run:
-	@./output/core
+	@./output/receipt-api

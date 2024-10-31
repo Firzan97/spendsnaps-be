@@ -17,7 +17,7 @@ func (db *Database) Connect() error {
 
 	// Connect
 	if err := mgm.SetDefaultConfig(
-		nil, "", options.Client().ApplyURI(db.URL),
+		nil, db.Name, options.Client().ApplyURI(db.URL),
 	); err != nil {
 		return err
 	}
