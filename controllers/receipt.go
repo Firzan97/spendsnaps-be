@@ -11,7 +11,9 @@ import (
 )
 
 func ExtractReceipt(c *gin.Context) {
+	services.Extract(c)
 
+	utils.Success(c, "")
 }
 
 func GetAll(c *gin.Context) {
